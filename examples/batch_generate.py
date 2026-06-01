@@ -17,8 +17,8 @@ OUTPUT_DIR = "output"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-images = glob.glob(os.path.join(IMAGE_DIR, "*.jpg")) + 
-         glob.glob(os.path.join(IMAGE_DIR, "*.png"))
+images = glob.glob(os.path.join(IMAGE_DIR, "*.jpg"))
+images += glob.glob(os.path.join(IMAGE_DIR, "*.png"))
 
 print(f"🎬 Batch Generation: {len(images)} images")
 print()
